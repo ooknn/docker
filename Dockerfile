@@ -1,4 +1,4 @@
-FROM aarch64/ubuntu:18.04
+FROM ubuntu:18.04
 MAINTAINER ubuntu  "ubuntu"
 
 RUN apt update && apt install cmake build-essential git -y
