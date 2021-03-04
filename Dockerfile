@@ -1,5 +1,5 @@
 ROM golang:1.9
-MAINTAINER tts  "tts"
+MAINTAINER tts  "ttts"
 WORKDIR $GOPATH/src/github.com/liuyh73/go-web-form
 ADD . $GOPATH/src/github.com/liuyh73/go-web-form
 RUN go get github.com/gorilla/mux
