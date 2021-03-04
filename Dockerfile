@@ -1,11 +1,6 @@
-FROM golang:1.9
+FROM ubuntu:18.04
 MAINTAINER tts  "ttts"
-WORKDIR $GOPATH/src/github.com/liuyh73/go-web-form
-ADD . $GOPATH/src/github.com/liuyh73/go-web-form
-RUN go get github.com/gorilla/mux
-RUN go get github.com/codegangsta/negroni
-RUN go get github.com/unrolled/render
-RUN go get github.com/spf13/pflag
-RUN go build .
-EXPOSE 8080
-ENTRYPOINT ["./go-web-form"]
+
+RUN apt update && apt install cmake build-essential -y
+RUN git clone https://github.com/grpc/grpc.git && cd grpc && git submodule update --init --recursive && cmake -H. -Bbuild && cmake --build build  -j`nproc`
+ENTRYPOINT ["echo hello"]
