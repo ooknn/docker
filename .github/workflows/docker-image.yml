@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: Build the Docker image
+        name: Build the Docker image
         with: 
           arch: aarch64
           distro: ubuntu18.04
