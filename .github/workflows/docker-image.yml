@@ -27,3 +27,5 @@ jobs:
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
           echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
+          docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
