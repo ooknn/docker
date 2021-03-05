@@ -2,4 +2,4 @@
 
 uname -a
 cat /etc/os-release
-echo `nporc`
+echo `nproc`
