@@ -5,9 +5,9 @@ MAINTAINER ubuntu  "ubuntu"
 #RUN git clone https://github.com/grpc/grpc.git && cd grpc && git submodule update --init --recursive && cmake -H. -Bbuild && cd build && make  -j`nproc`
 RUN uname -a
 RUN cat /etc/os-release
-
+RUN set -x
 RUN apt update
-RUN apt-get install -y wget git curl software-properties-common libsqlite3-dev
+RUN apt-get install -y wget git curl software-properties-common libsqlite3-dev build-essential
 RUN apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ bionic main'
 RUN add-apt-repository -y ppa:mhier/libboost-latest
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
