@@ -7,8 +7,8 @@ RUN uname -a
 RUN cat /etc/os-release
 RUN set -x
 RUN apt update
-RUN apt-get install -y wget git curl software-properties-common libsqlite3-dev build-essential
-RUN apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ bionic main'
+RUN apt-get install -y wget git curl software-properties-common libsqlite3-dev build-essential snap
+RUN snap install cmake  --classic
 RUN add-apt-repository -y ppa:mhier/libboost-latest
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN apt update
